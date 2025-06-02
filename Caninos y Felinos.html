@@ -1,13 +1,142 @@
+<!-- Archivo: index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caninos y Felinos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centro Veterinario Caninos y Felinos</title>
+  <link rel="stylesheet" href="CV-CYF.css">
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-    <p>Vamos a hacer una pagina web para el centro veterinario
-        caninos y felinos
-    </p>
+  <header>
+    <nav class="navbar container">
+      <div class="logo">
+        <i class="fas fa-paw"></i> <span>Caninos & Felinos</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#servicios"><i class="fas fa-stethoscope"></i> Servicios</a></li>
+        <li><a href="#citas"><i class="fas fa-calendar-check"></i> Citas</a></li>
+        <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+        <li><a href="#cuenta"><i class="fas fa-user-circle"></i> Mi Cuenta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Bienvenido a Caninos & Felinos</h1>
+        <p>Atención integral, amor y cuidado para tus mascotas con un equipo profesional y dedicado.</p>
+        <a href="#citas" class="btn-primary"><i class="fas fa-calendar-plus"></i> Programa tu cita</a>
+      </div>
+      <div class="hero-img">
+        <img src="" alt="Mascota feliz en Caninos y felinos" />
+      </div>
+    </section>
+
+    <section id="servicios" class="services">
+      <h2><i class="fas fa-paw"></i> Nuestros Servicios</h2>
+      <div class="service-cards">
+        <article>
+          <i class="fas fa-ambulance service-icon"></i>
+          <h3>Urgencias 24/7</h3>
+          <p>Atención inmediata para cualquier emergencia veterinaria.</p>
+        </article>
+        <article>
+          <i class="fas fa-syringe service-icon"></i>
+          <h3>Vacunación</h3>
+          <p>Protege a tu mascota con nuestro plan completo de vacunación.</p>
+        </article>
+        <article>
+          <i class="fas fa-tooth service-icon"></i>
+          <h3>Odontología</h3>
+          <p>Cuidado dental especializado para mantener la salud bucal de tu mascota.</p>
+        </article>
+        <article>
+          <i class="fas fa-cut service-icon"></i>
+          <h3>Estética y Grooming</h3>
+          <p>Baños, cortes y cuidado estético para que tu mascota luzca genial.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="citas" class="forms-section">
+      <h2><i class="fas fa-calendar-check"></i> Programar Cita</h2>
+      <form class="form-small" aria-label="Formulario para programar citas">
+        <div class="form-group">
+          <label for="nombre-mascota">Nombre de la mascota</label>
+          <input type="text" id="nombre-mascota" name="nombre-mascota" placeholder="Ej. Rocky" required />
+        </div>
+        <div class="form-group">
+          <label for="tipo-mascota">Tipo de mascota</label>
+          <select id="tipo-mascota" name="tipo-mascota" required>
+            <option value="" disabled selected>Seleccione</option>
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fecha-cita">Fecha preferida</label>
+          <input type="date" id="fecha-cita" name="fecha-cita" required />
+        </div>
+        <div class="form-group">
+          <label for="hora-cita">Hora preferida</label>
+          <input type="time" id="hora-cita" name="hora-cita" required />
+        </div>
+        <button type="submit" class="btn-secondary"><i class="fas fa-paper-plane"></i> Enviar</button>
+      </form>
+    </section>
+
+    <section id="cuenta" class="forms-section">
+      <h2><i class="fas fa-user-circle"></i> Iniciar Sesión</h2>
+      <form class="form-small" aria-label="Formulario de inicio de sesión">
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required />
+        </div>
+        <div class="form-group">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required />
+        </div>
+        <button type="submit" class="btn-secondary"><i class="fas fa-arrow-right-to-bracket"></i> Entrar</button>
+      </form>
+    </section>
+
+    <section id="contacto" class="forms-section contacto">
+      <h2><i class="fas fa-envelope"></i> Contáctanos</h2>
+      <form class="form-small" aria-label="Formulario de contacto">
+        <div class="form-group">
+          <label for="nombre-contacto">Nombre</label>
+          <input type="text" id="nombre-contacto" name="nombre-contacto" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="email-contacto">Correo electrónico</label>
+          <input type="email" id="email-contacto" name="email-contacto" placeholder="ejemplo@mail.com" required />
+        </div>
+        <div class="form-group">
+          <label for="mensaje-contacto">Mensaje</label>
+          <textarea id="mensaje-contacto" name="mensaje-contacto" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+      </form>
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i> Teléfono: +52 555 123 4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Falsa 123, Ciudad</p>
+        <p><i class="fas fa-clock"></i> Horario: Lun - Vie 9:00 - 18:00</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Caninos & Felinos. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
